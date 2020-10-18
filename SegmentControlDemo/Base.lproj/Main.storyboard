@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SegmentControlDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HZW-KU-bQb">
+                                <rect key="frame" x="20" y="64" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Google"/>
+                                    <segment title="Facebook"/>
+                                    <segment title="LinkedIn"/>
+                                    <segment title="Twitter"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="IfG-wd-0fm"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Selection Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNp-mV-Ase">
+                                <rect key="frame" x="20" y="382" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ucL-37-pUP">
+                                <rect key="frame" x="20" y="135" width="374" height="227"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iNp-mV-Ase" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5C2-a9-dXT"/>
+                            <constraint firstItem="ucL-37-pUP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CGP-3n-Xd5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ucL-37-pUP" secondAttribute="trailing" constant="20" id="a9x-ZS-i3b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ucL-37-pUP" secondAttribute="bottom" constant="500" id="d9l-iu-gRZ"/>
+                            <constraint firstItem="HZW-KU-bQb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dix-FJ-1AZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HZW-KU-bQb" secondAttribute="trailing" constant="20" id="ghG-2n-xnM"/>
+                            <constraint firstItem="iNp-mV-Ase" firstAttribute="top" secondItem="ucL-37-pUP" secondAttribute="bottom" constant="20" id="hyQ-ve-RdX"/>
+                            <constraint firstItem="ucL-37-pUP" firstAttribute="top" secondItem="HZW-KU-bQb" secondAttribute="bottom" constant="40" id="orJ-xR-vVh"/>
+                            <constraint firstItem="HZW-KU-bQb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="scx-WV-f8L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iNp-mV-Ase" secondAttribute="trailing" constant="20" id="tZH-p4-O0D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ucL-37-pUP" id="Qym-hq-Cl0"/>
+                        <outlet property="label" destination="iNp-mV-Ase" id="xVg-BT-Iie"/>
+                        <outlet property="segment" destination="HZW-KU-bQb" id="A24-95-oLO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
